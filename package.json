@@ -1,0 +1,13 @@
+{
+    "version": "0.0.1",
+    "name": "runtimecomponent1",
+    "description": "runtime component plugin",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/thomasouvre/runtimeplugin.git"
+    },
+    "devDependencies": {
+    },
+    "optionalDependencies": {
+    }
+}
