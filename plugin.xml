@@ -6,7 +6,8 @@
     <description>runtime component plugin</description>
     <license>Infinite Square</license>
     <keywords>cordova,runtime,component</keywords>
-
+    <repo>https://github.com/thomasouvre/runtimeplugin.git</repo>
+    
     <js-module src="www/RuntimeComponent.js" 
                name="RuntimeComponentAPI">
         <clobbers target="window.RuntimeComponentAPI" />
