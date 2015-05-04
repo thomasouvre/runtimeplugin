@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="runtimecomponent1"
+        version="0.0.1">
+    <name>runtimecomponent1</name>
+    <description>runtime component plugin</description>
+    <license>Infinite Square</license>
+    <keywords>cordova,runtime,component</keywords>
+
+    <js-module src="www/RuntimeComponent.js" 
+               name="RuntimeComponentAPI">
+        <clobbers target="window.RuntimeComponentAPI" />
+    </js-module>
+
+    <!-- windows8 -->
+    <platform name="windows8">
+        <js-module src="src/windows/RuntimeComponentProxy.js" 
+                   name="RuntimeComponentAPIProxy">
+            <merges target="" />
+        </js-module>
+        
+        <framework src="src/windows/Windows/RuntimeComponent1.Windows.vcxproj" 
+                   custom="true" 
+                   type="projectReference"
+                   target="windows80"/>
+    </platform>
+
+    <!-- windows -->
+    <platform name="windows">
+        <js-module src="src/windows/Windows/RuntimeComponent1.Windows.vcxproj" 
+                   name="RuntimeComponentAPIProxy">
+            <merges target="" />
+        </js-module>
+        <framework src="src/windows/Windows/RuntimeComponent1.Windows.vcxproj" 
+                   custom="true" 
+                   type="projectReference"
+                   target="windows" />
+        <framework src="src/windows/WindowsPhone/RuntimeComponent1.WindowsPhone.vcxproj" 
+                   custom="true" 
+                   type="projectReference"
+                   target="phone" />
+    </platform>
+</plugin>
